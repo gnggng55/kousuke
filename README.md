@@ -1,24 +1,43 @@
-# README
+# 工助(kousuke)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
 
-* Ruby version
+| Column             | Type   | Opinions                  |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| last_name          | string | null: false               |
 
-* System dependencies
+### Association
+- has_many :properties
+- has_many :constructions
 
-* Configuration
 
-* Database creation
+## properties
 
-* Database initialization
+| Column               | Type       | Options                        |
+| -------------------- | ---------- | ------------------------------ |
+| property_name        | string     | null: false                    |
+| address              | text       | null: false                    |
+| existing_information | integer    |                     |
+| new_information      | string     | 
+| construction_details | integer    |                     |
 
-* How to run the test suite
+### Association
+- belongs_to :user
+- has_many :construction
 
-* Services (job queues, cache servers, search engines, etc.)
+## construction
 
-* Deployment instructions
+| Column               | Type       | Opinions                       |
+| -------------------- | ---------- | ------------------------------ |
+| construction_time_id | string     | null: false                    |
+| instructions         | integer    | null: false                    |
+| important_point      | string     | null: false                    |
+| remarks              | string     | null: false                    |
 
-* ...
+### Association
+- belongs_to :user
+- belongs_to :construction
