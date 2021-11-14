@@ -8,36 +8,79 @@
 | nickname           | string | null: false               |
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
-| last_name          | string | null: false               |
 
 ### Association
 - has_many :properties
-- has_many :constructions
+- has_many :approaches
+- has_many :quotations
 
 
-## properties
+## properties テーブル
 
-| Column               | Type       | Options                        |
-| -------------------- | ---------- | ------------------------------ |
-| property_name        | string     | null: false                    |
-| address              | text       | null: false                    |
-| existing_information | integer    |                     |
-| new_information      | string     | 
-| construction_details | integer    |                     |
+| Column               | Type    | Options     |
+| -------------------- | ------- | ------------|
+| property_name        | string  | null: false |
+| address              | text    | null: false |
+| existing_information | string  |             |
+| new_information      | string  |             |
+| remarks              | text    |             |
+| parking_id           | integer |             |
+| gas_id               | integer |             |
 
 ### Association
-- belongs_to :user
-- has_many :construction
+- has_many :rooms
 
-## construction
+
+## room テーブル
 
 | Column               | Type       | Opinions                       |
 | -------------------- | ---------- | ------------------------------ |
-| construction_time_id | string     | null: false                    |
-| instructions         | integer    | null: false                    |
-| important_point      | string     | null: false                    |
-| remarks              | string     | null: false                    |
+| room_number          | integer    | null: false                    | 
+| construction_time_id | string     |                                |
+| instructions         | integer    |                                |
+| remarks_room         | string     |                                |
+| construction_details | integer    |                                |
+| property             | references | null; false, foreign_key: true |
 
 ### Association
-- belongs_to :user
-- belongs_to :construction
+- belongs_to :property
+- has_many :approaches
+- has_many :quotations
+
+
+
+## approach テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null; false, foreign_key: true |
+| room    | references | null: false, foreign_key: true | 
+| content | text       | null; false                    |
+
+### Association
+belongs_to :user
+belongs_to :room
+
+
+## quotation
+
+| Column | Type       | Opinions                       |
+| ------ | ---------- | ------------------------------ |
+| item   | references | null: false, foreign_key: true |
+| free   | string     |                                |
+
+### Association
+has_many :items
+
+
+## item
+| Column         | Type       | Options     |
+| -------------- | ---------- | ------------|
+| item_name      | string     | null: false |
+| product_number | string     | null: false |
+| price          | integer    | null: false |
+| rate           | integer    |             |
+| gas_id         | integer    |             |
+
+### Association
+has_many :quotation
