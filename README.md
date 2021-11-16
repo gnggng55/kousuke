@@ -74,7 +74,7 @@
 - has_many :rooms
 
 
-## room テーブル
+## rooms テーブル
 
 | Column               | Type       | Opinions                       |
 | -------------------- | ---------- | ------------------------------ |
@@ -85,14 +85,14 @@
 | construction_details | integer    |                                |
 | property             | references | null; false, foreign_key: true |
 
-### Association
+### Associations
 - belongs_to :property
 - has_many :approaches
 - has_many :quotations
 
 
 
-## approach テーブル
+## approaches テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
@@ -105,7 +105,7 @@ belongs_to :user
 belongs_to :room
 
 
-## quotation
+## quotations
 
 | Column | Type       | Opinions                       |
 | ------ | ---------- | ------------------------------ |
@@ -116,7 +116,7 @@ belongs_to :room
 has_many :items
 
 
-## item
+## items
 | Column         | Type       | Options     |
 | -------------- | ---------- | ------------|
 | item_name      | string     | null: false |
