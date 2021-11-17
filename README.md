@@ -33,6 +33,10 @@
   - 設備機器の商品名、品番、金額、仕切りを登録できる
   - 同じ商品の情報を登録することで一度登録するだけで何度も使用ができる
 
+  ### 簡易的な見積もりを作成できる
+  - 登録した商品の金額と工事費を登録できる
+  - 登録した商品の金額と工事費から、仕入れ金などから利益額を自動計算する
+
 
 ## 制作背景
 前職では、住宅設備機器の販売、施工をする会社にいました。
@@ -79,10 +83,10 @@
 | Column               | Type       | Opinions                       |
 | -------------------- | ---------- | ------------------------------ |
 | room_number          | integer    | null: false                    | 
-| construction_time_id | string     |                                |
-| instructions         | integer    |                                |
-| remarks_room         | string     |                                |
-| construction_details | integer    |                                |
+| construction_time_id | integer    |                                |
+| instructions         | text       |                                |
+| remarks_room         | text       |                                |
+| construction_details | string     |                                |
 | property             | references | null; false, foreign_key: true |
 
 ### Associations
