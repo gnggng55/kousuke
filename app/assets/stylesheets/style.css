@@ -31,3 +31,17 @@ h1 {
 .logout {
   float: right;
 }
+
+/* ユーザー管理 */
+
+.new_user {
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.fields {
+  text-align: center;
+}
+
+.field {
+  margin: 15px;
+}
