@@ -1,0 +1,26 @@
+<div class="contents">
+  <div class="container">
+    <h3>商品登録</h3>
+    <%= form_with(model: @item, local: true) do |form| %>
+    <div class="input-form">
+      <div class="item_name form">
+        <div class="weight-bold-text">商品名</div>
+        <%= form.text_field :item_name, placeholder: "商品名" %>
+      </div>
+      <div class="product_number form">
+        <div class="weight-bold-text">品番</div>
+        <%= form.text_field :product_number, placeholder: "品番" %>
+      </div>
+      <div class="price form">
+        <div class="weight-bold-text">定価</div>
+        <%= form.text_field :price, placeholder: "定価" %>
+      </div>
+      <div class="rate form">
+        <div class="weight-bold-text">新規機種</div>
+        <%= form.text_field :rate, placeholder: "新規機種" %>
+      </div>
+      <%= form.submit "登録する" %>
+    </div>
+    <% end %>
+  </div>
+</div>
