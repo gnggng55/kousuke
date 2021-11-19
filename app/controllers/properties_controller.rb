@@ -1,4 +1,5 @@
 class PropertiesController < ApplicationController
+
   def index
   end
 
@@ -8,6 +9,10 @@ class PropertiesController < ApplicationController
 
   def create
     Property.create(property_params)
+  end
+
+  def search
+    @properties = Property.search(params[:keyword])
   end
 
   private
