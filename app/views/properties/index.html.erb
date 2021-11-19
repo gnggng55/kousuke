@@ -7,3 +7,9 @@
     <li class="logout"><%= link_to "ログアウト" %></li>
   </ul>
 </div>
+
+<p>物件を検索する</p>
+<%= form_with(url: serch_properties_url, local: true, method: :get, class: "search-form") do |form| %>
+  <%= form.text_field :keyword, placeholder: "物件を検索する", class: "search-input" %>
+  <%= form.submit "検索", class: "search-btn" %>
+<% end %>
