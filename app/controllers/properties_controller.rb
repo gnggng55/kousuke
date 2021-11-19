@@ -5,4 +5,14 @@ class PropertiesController < ApplicationController
   def new
     @property = Property.new
   end
+
+  def create
+    Property.create(property_params)
+  end
+
+  private
+  def property_params
+    params.require(:property).permit(:property_name, :address, :existing_information,
+       :new_information, :remarks, :parking_id, :gas_id, :image)
+  end
 end
