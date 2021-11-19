@@ -84,10 +84,10 @@
 | -------------------- | ---------- | ------------------------------ |
 | room_number          | integer    | null: false                    | 
 | construction_time_id | integer    |                                |
-| instructions         | text       |                                |
+| instruction          | text       |                                |
 | remarks_room         | text       |                                |
-| construction_details | string     |                                |
-| property             | references | null; false, foreign_key: true |
+| construction_detail  | string     |                                |
+| property             | references | null: false, foreign_key: true |
 
 ### Associations
 - belongs_to :property
