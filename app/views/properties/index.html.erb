@@ -42,3 +42,11 @@
 </table>
 <% end %>
 </div>
+
+
+<div class="list">
+  <% @properties.each do |property| %>
+    <p><%= link_to property.property_name, property_path(property.id), method: :get %></p>
+    <p><%= property.address %></p>
+  <% end %>
+</div>

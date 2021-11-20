@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
 
   def index
+    @properties = Property.all
   end
 
   def new
@@ -9,6 +10,10 @@ class PropertiesController < ApplicationController
 
   def create
     Property.create(property_params)
+  end
+
+  def show
+    @property = Property.find(params[:id])
   end
 
   def search

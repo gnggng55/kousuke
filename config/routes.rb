@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "properties#index"
-  resources :properties, only: [:index, :new, :create] do
+  resources :properties, only: [:index, :new, :create, :show] do
     collection do
       get 'search'
     end
