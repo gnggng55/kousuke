@@ -16,6 +16,12 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
   end
 
+  def destroy
+    property = Property.find(params[:id])
+    property.destroy
+    redirect_to root_path
+  end
+
   def search
     @properties = Property.search(params[:keyword])
   end
