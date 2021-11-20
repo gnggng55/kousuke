@@ -1,4 +1,7 @@
 class Property < ApplicationRecord
+  has_many :room
+
+
   def self.search(search)
     if search != ""
       Property.where('text LIKE(?)', "%#{search}%")
@@ -6,4 +9,5 @@ class Property < ApplicationRecord
       Property.all
     end
   end
+
 end
