@@ -1,7 +1,6 @@
 class Property < ApplicationRecord
   has_many :room
 
-  validates :property_name, presence: true,
 
   def self.search(search)
     if search != ""
@@ -10,4 +9,5 @@ class Property < ApplicationRecord
       Property.all
     end
   end
+
 end
