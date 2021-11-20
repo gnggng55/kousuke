@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "properties#index"
   resources :properties, only: [:index, :new, :create] do
     collection do
-      get 'serch'
+      get 'search'
     end
   end
   resources :rooms, only: [:index, :new]

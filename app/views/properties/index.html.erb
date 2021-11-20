@@ -8,8 +8,25 @@
   </ul>
 </div>
 
+<div class="">
 <p>物件を検索する</p>
-<%= form_with(url: serch_properties_url, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "物件を検索する", class: "search-input" %>
+<%= form_with(url: search_properties_path, local: true, method: :get, class: "search-form") do |form| %>
+  <div class="property-search form">
+    <p>物件名で検索</p>
+    <%= form.text_field :keyword, placeholder: "物件名", class: "search-input" %>
+  </div>
+  <div class="address-search form">
+    <p>住所で検索する</p>
+    <%= form.text_field :keyword, placeholder: "住所", class: "search-input" %>
+  </div>
+  <div class="existing-information-search form">
+    <p>既存情報で検索する</p>
+    <%= form.text_field :keyword, placeholder: "既存情報", class: "search-input" %>
+  </div>
+  <div class="new-information-search form">
+    <p>設置機種で検索する</p>
+    <%= form.text_field :keyword, placeholder: "設置機種", class: "search-input" %>
+  </div>
   <%= form.submit "検索", class: "search-btn" %>
 <% end %>
+</div>
