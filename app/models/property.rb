@@ -1,5 +1,5 @@
 class Property < ApplicationRecord
-  has_many :room
+  has_many :rooms
 
 
   def self.search(search)
