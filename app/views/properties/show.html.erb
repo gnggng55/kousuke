@@ -40,7 +40,7 @@
 
 <div class="room-list">
   <% @rooms.each do |room| %>
-    <%= link_to room.room_number %>
+    <%= link_to room.room_number, property_room_path(room.id)%>
   <%= room.construction_detail %>
   <% end %>
 </div>
