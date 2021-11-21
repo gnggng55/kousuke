@@ -5,9 +5,12 @@ class RoomsController < ApplicationController
     @property = Property.find(params[:property_id])
   end
 
-
   def create
     Room.create(room_params)
+  end
+
+  def show
+    @room = Room.find(params[:id])
   end
 
   private

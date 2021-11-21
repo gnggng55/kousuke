@@ -38,3 +38,11 @@
   <%= link_to "部屋情報を登録する", property_rooms_path(@property.id) %>
 </div>
 
+<div class="room-list">
+  <% @rooms.each do |room| %>
+    <%= link_to room.room_number, property_room_path(room.id)%>
+  <%= room.construction_detail %>
+  <% end %>
+</div>
+
+

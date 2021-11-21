@@ -14,6 +14,7 @@ class PropertiesController < ApplicationController
 
   def show
     @property = Property.find(params[:id])
+    @rooms = Room.where(id: params[:id])
   end
 
   def destroy
