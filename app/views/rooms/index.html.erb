@@ -7,3 +7,31 @@
     <li class="logout"><%= link_to "ログアウト" %></li>
   </ul>
 </div>
+
+<div class="contents">
+  <div class="container">
+    <h3>物件登録</h3>
+    <%= form_with(model: @room, local: true) do |form| %>
+    <div class="input-form">
+      <div class="room_number form">
+        <div class="weight-bold-text">部屋番号</div>
+        <%= form.text_field :room_number, placeholder: "部屋番号" %>
+      </div>
+      <div class="construction_detail form">
+        <div class="weight-bold-text">工事内容</div>
+        <%= form.text_field :construction_detail, placeholder: "工事内容" %>
+      </div>
+      <div class="instruction form">
+        <div class="weight-bold-text">工事指示</div>
+        <%= form.text_area :instruction, placeholder: "工事指示", rows: "10", size: "53x10" %>
+      </div>
+      </div>
+      <div class="remarks_room form">
+        <div class="weight-bold-text">備考</div>
+        <%= form.text_area :remarks_room, placeholder: "備考", rows: "10", size: "53x10" %>
+      </div>
+      <%= form.submit "登録する" %>
+    </div>
+    <% end %>
+  </div>
+</div>

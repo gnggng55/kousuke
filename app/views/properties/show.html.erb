@@ -34,4 +34,7 @@
 <div class="delete">
   <%= link_to '削除する', property_path(@property.id), method: :delete %>
 </div>
+<div class="jump-room">
+  <%= link_to "部屋情報を登録する", property_rooms_path(@property.id) %>
+</div>
 
