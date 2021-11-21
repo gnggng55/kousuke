@@ -11,7 +11,7 @@
 <div class="contents">
   <div class="container">
     <h3>物件登録</h3>
-    <%= form_with(model: @room, local: true) do |form| %>
+    <%= form_with(model: [@property, @room],  local: true) do |form| %>
     <div class="input-form">
       <div class="room_number form">
         <div class="weight-bold-text">部屋番号</div>
