@@ -2,6 +2,41 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(231, 238, 231, 0.629);
+  margin: 0;
+}
+
+/* トップページ */
+
+.contents {
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+h3{
+  padding: 30px;
+  font-size: 30px;
+  border-bottom: 10px ridge #424242;
+}
+
+.property-lists {
+  display: flex;
+}
+
+.property-list {
+  background-color: rgba(141, 224, 141, 0.238);
+  padding: 20px;
+  margin: 20px 30px;
+  border-left: 10px solid #5e5c5c;
+  border-bottom: 2px solid #7c7979;
+  width: 50%;
+}
+
+.user-list {
+  float: right;
+}
 
 .header a {
   text-decoration: none;
@@ -13,6 +48,11 @@
   font-size: 20px;
   border-bottom: 8px double gray;
   margin: 0 15px;
+  text-decoration:none
+}
+
+.menuLIST {
+  text-decoration: none;
 }
 
 li {
@@ -29,9 +69,7 @@ h1 {
   border-bottom: 8px double gray;
 }
 
-.logout {
-  float: right;
-}
+
 
 /* ユーザー管理 */
 
@@ -56,3 +94,54 @@ h1 {
 .form {
   padding: 3px;
 }
+
+.detail-table {
+  max-width: 500px;
+}
+/* 物件詳細 */
+
+table {
+  font-size: 20px;
+  margin: auto
+}
+
+tr {
+  border: solid 1px black;
+  background-color: rgb(197, 194, 194);
+}
+
+td {
+  padding: 0 25px;
+}
+
+th {
+  padding: 5px 10px;
+}
+
+.delete {
+  float: right;
+  padding: 20px;
+}
+
+.jump-room {
+  padding: 40px 20px;
+}
+
+.rooms {
+  border-top: solid 2px grey;
+  text-align: center;
+}
+
+.room-list {
+  padding: 20px;
+  background-color: rgba(141, 224, 141, 0.238);
+  padding: 20px;
+  margin: 20px 30px;
+  border-left: 10px solid #5e5c5c;
+  border-bottom: 2px solid #7c7979;
+  font-size: 20px;
+}
+
+
+
+

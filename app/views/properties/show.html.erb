@@ -1,48 +1,54 @@
-<table class="detail-table">
-  <tbody>
-    <tr>
-      <th class="detail-property">物件名</th>
-      <td class="detail-index"><%= @property.property_name %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">住所</th>
-      <td class="detail-index"><%= @property.address %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">既存情報</th>
-      <td class="detail-index"><%= @property.existing_information %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">新規機種</th>
-      <td class="detail-index"><%= @property.new_information %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">駐車場情報</th>
-      <td class="detail-index"><%= "hoge" %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">ガス種</th>
-      <td class="detail-index"><%= "hoge" %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">備考</th>
-      <td class="detail-index"><%= @property.remarks %></td>
-    </tr>
-  </tbody>
-</table>
+<div class="contents">
+  <div class="container">
+    <h3>物件詳細</h3>
+    <table >
+      <tr>
+        <th class="detail-property">物件名</th>
+        <td class="detail-index"><%= @property.property_name %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">住所</th>
+        <td class="detail-index"><%= @property.address %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">既存情報</th>
+        <td class="detail-index"><%= @property.existing_information %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">新規機種</th>
+        <td class="detail-index"><%= @property.new_information %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">駐車場情報</th>
+        <td class="detail-index"><%= "hoge" %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">ガス種</th>
+        <td class="detail-index"><%= "hoge" %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">備考</th>
+        <td class="detail-index"><%= @property.remarks %></td>
+      </tr>
+    </table>
 
-<div class="delete">
-  <%= link_to '削除する', property_path(@property.id), method: :delete %>
-</div>
-<div class="jump-room">
-  <%= link_to "部屋情報を登録する", property_rooms_path(@property.id) %>
-</div>
+  <div class="delete">
+    <%= link_to '削除する', property_path(@property.id),class:"menuLIST", method: :delete %>
+  </div>
+  <div class="jump-room">
+    <%= link_to "部屋情報を登録する", property_rooms_path(@property.id), class:"menuLIST" %>
+  </div>
 
-<div class="room-list">
-  <% @rooms.each do |room| %>
-    <%= link_to room.room_number, property_room_path(room.id)%>
-  <%= room.construction_detail %>
-  <% end %>
+    <div class="rooms">
+      <h4>部屋情報一覧</h4>
+      <div class="room-lists">
+        <% @rooms.each do |room| %>
+        <div class="room-list">
+          <%= link_to room.room_number, property_room_path(room.id), class:"menuLIST"%>
+          <%= room.construction_detail %>
+        </div>
+        <% end %>
+    </div>
+  </div>
 </div>
-
 

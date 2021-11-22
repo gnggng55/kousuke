@@ -6,7 +6,12 @@ class RoomsController < ApplicationController
   end
 
   def create
-    Room.create(room_params)
+    @room = Room.create(room_params)
+    if @room.save
+      redirect_to property_path(@room.property_id)
+    else
+      render :new
+    end
   end
 
   def show

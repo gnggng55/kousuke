@@ -1,16 +1,6 @@
-<div class="menu">
-  <ul>
-    <li><%= link_to "物件検索" , class:"menuLIST" %></li>
-    <li><%= link_to "物件登録" %></li>
-    <li><%= link_to "商品検索" %></li>
-    <li><%= link_to "商品登録" %></li>
-    <li class="logout"><%= link_to "ログアウト" %></li>
-  </ul>
-</div>
-
 <div class="contents">
   <div class="container">
-    <h3>物件登録</h3>
+    <h3>部屋情報登録</h3>
     <%= form_with(model: [@property, @room],  local: true) do |form| %>
     <div class="input-form">
       <div class="room_number form">

@@ -1,5 +1,7 @@
+<div class="contents">
+<div class="container">
+<h3>部屋情報</h3>
 <table class="detail-table">
-  <tbody>
     <tr>
       <th class="detail-property">部屋番号</th>
       <td class="detail-index"><%= @room.room_number %></td>
@@ -20,7 +22,8 @@
       <th class="detail-property">備考</th>
       <td class="detail-index"><%= @room.remarks_room %></td>
     </tr>
-  </tbody>
 </table>
 
 <%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id) %>
+</div>
+</div>
