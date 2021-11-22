@@ -24,6 +24,10 @@
     </tr>
 </table>
 
+<div class="delete">
+    <%= link_to '削除する', property_room_path(@property, @room.id),class:"menuLIST", method: :delete %>
+  </div>
+
 <%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id) %>
 </div>
 </div>
