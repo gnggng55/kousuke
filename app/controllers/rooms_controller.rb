@@ -11,6 +11,8 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @property = Property.find(params[:property_id])
+    @approaches = Approach.where(id: params[:id])
   end
 
   private
