@@ -1,14 +1,17 @@
 <div class="menu">
   <ul>
-    <li><%= link_to "物件検索" , class:"menuLIST" %></li>
-    <li><%= link_to "物件登録", new_property_path %></li>
-    <li><%= link_to "商品検索" %></li>
-    <li><%= link_to "商品登録" %></li>
-    <li class="logout"><%= link_to "ログアウト" %></li>
+    <li><%= link_to "物件検索", root_path, class:"menuLIST" %></li>
+    <li><%= link_to "物件登録", new_property_path, class:"menuLIST" %></li>
+    <li><%= link_to "商品検索", root_path, class:"menuLIST" %></li>
+    <li><%= link_to "商品登録", root_path, class:"menuLIST" %></li>
+    <div class="user-list">
+      <li class="login"><%= link_to "ログイン", root_path, class:"menuLIST" %></li>
+      <li class="logout"><%= link_to "ログアウト", root_path, class:"menuLIST" %></li>
+    </div>
   </ul>
 </div>
 
-<div class="search-form">
+<!-- <div class="search-form">
 <p>物件を検索する</p>
 <table>
 <div class="">
@@ -41,12 +44,20 @@
   </div>
 </table>
 <% end %>
-</div>
+</div> -->
 
-
-<div class="list">
-  <% @properties.each do |property| %>
-    <p><%= link_to property.property_name, property_path(property.id) %></p>
-    <p><%= property.address %></p>
-  <% end %>
+<div class="contents">
+<h3>登録した物件</h3>
+  <div class="property-lists">
+      <% @properties.each do |property| %>
+        <div class="property-list">
+          <div class="property-name">
+            <%= link_to property.property_name, property_path(property.id), class:"menuLIST" %>
+          </div>
+          <div class="property-address">
+            <%= property.address %>
+          </div>
+        </div>
+      <% end %>
+  </div>
 </div>
