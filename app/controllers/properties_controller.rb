@@ -9,12 +9,17 @@ class PropertiesController < ApplicationController
   end
 
   def create
-    Property.create(property_params)
+    @property = Property.create(property_params)
+      if @property.save
+        redirect_to property_path(@property.id)
+      else
+        render :new
+      end
   end
 
   def show
     @property = Property.find(params[:id])
-    @rooms = Room.where(id: params[:id])
+    @rooms = Room.where(property_id: params[:id])
   end
 
   def destroy

@@ -5,8 +5,12 @@
     <li><%= link_to "商品検索", root_path, class:"menuLIST" %></li>
     <li><%= link_to "商品登録", root_path, class:"menuLIST" %></li>
     <div class="user-list">
-      <li class="login"><%= link_to "ログイン", root_path, class:"menuLIST" %></li>
-      <li class="logout"><%= link_to "ログアウト", root_path, class:"menuLIST" %></li>
+    <% if user_signed_in? %>
+      <li><%= link_to "ログアウト", root_path, class:"menuLIST" %></li>
+    <% else %>
+      <li><%= link_to "ログイン", new_user_session_path, class:"menuLIST" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "menuLIST" %></li>
+    <% end %>
     </div>
   </ul>
 </div>

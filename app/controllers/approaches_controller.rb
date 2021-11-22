@@ -7,7 +7,6 @@ class ApproachesController < ApplicationController
   end
 
   def create
-    binding.pry
     Approach.create(approach_params)
   end
 
