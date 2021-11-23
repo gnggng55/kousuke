@@ -6,11 +6,11 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.create(room_params)
+    @room = Room.new(room_params)
     if @room.save
       redirect_to property_path(@room.property_id)
     else
-      render :new
+      render property_rooms_path(@room.id)
     end
   end
 
@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail).merge(property_id: params[:id])
+    params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail).merge(property_id: params[:property_id])
   end
 
   

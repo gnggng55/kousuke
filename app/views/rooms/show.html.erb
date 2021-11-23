@@ -1,33 +1,40 @@
 <div class="contents">
 <div class="container">
-<h3>部屋情報</h3>
-<table class="detail-table">
-    <tr>
-      <th class="detail-property">部屋番号</th>
-      <td class="detail-index"><%= @room.room_number %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">工事内容</th>
-      <td class="detail-index"><%= @room.construction_detail %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">工事時間</th>
-      <td class="detail-index"><%= "hoge" %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">工事指示</th>
-      <td class="detail-index"><%= @room.instruction %></td>
-    </tr>
-    <tr>
-      <th class="detail-property">備考</th>
-      <td class="detail-index"><%= @room.remarks_room %></td>
-    </tr>
-</table>
+  <h3>部屋情報</h3>
+    <table class="detail-table">
+      <tr>
+        <th class="detail-property">部屋番号</th>
+        <td class="detail-index"><%= @room.room_number %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">工事内容</th>
+        <td class="detail-index"><%= @room.construction_detail %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">工事時間</th>
+        <td class="detail-index"><%= "hoge" %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">工事指示</th>
+        <td class="detail-index"><%= @room.instruction %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">備考</th>
+        <td class="detail-index"><%= @room.remarks_room %></td>
+      </tr>
+    </table>
 
-<div class="delete">
+  <div class="delete">
     <%= link_to '削除する', property_room_path(@property, @room.id),class:"menuLIST", method: :delete %>
   </div>
 
-<%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id) %>
-</div>
+  <div class="jump-room">
+    <%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id) %>
+  </div>
+
+    <div class="approaches">
+      <h4>アプローチ</h4>
+    </div>
+
+  </div>
 </div>
