@@ -8,7 +8,8 @@
 行うことができます。1名から大人数使用できます。
 
 ## 本番環境
-
+URL：https://kousuke.herokuapp.com/
+       ID：tech  PASS：kkkk
 
 
 ## 制作背景
