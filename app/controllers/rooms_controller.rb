@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @room = Room.new
@@ -32,5 +33,9 @@ class RoomsController < ApplicationController
     params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail).merge(property_id: params[:property_id])
   end
 
-  
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
+  end
 end

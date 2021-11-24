@@ -14,8 +14,9 @@
  *= require_self
  */
 
+ 
  input[type="text"] {
-  width: 400px;
+  width: 300px;
   height: 40px;
 }
 

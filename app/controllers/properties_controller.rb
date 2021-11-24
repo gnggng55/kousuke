@@ -1,4 +1,5 @@
 class PropertiesController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @properties = Property.all
@@ -36,5 +37,11 @@ class PropertiesController < ApplicationController
   def property_params
     params.require(:property).permit(:property_name, :address, :existing_information,
        :new_information, :remarks, :parking_id, :gas_id, :image)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 end
