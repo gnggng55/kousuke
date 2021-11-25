@@ -16,6 +16,14 @@ class ApproachesController < ApplicationController
     end
   end
 
+  def destroy
+    @property = Property.find(params[:property_id])
+    @room = Room.find(params[:room_id])
+    approach = Approach.find(params[:id])
+    approach.destroy
+    redirect_to property_room_path(@property.id, @room.id)
+  end 
+
   private
   def approach_params
     params.require(:approach).permit(:content) .merge(room_id: params[:room_id], user_id: current_user.id)

@@ -42,6 +42,9 @@
             <div class="create-day"><%= approach.created_at %></div>
           </div>
           <div class="approach-content"><%= approach.content %></div>
+          <div class="delele-approach">
+            <%= link_to '削除する',  property_room_approach_path(@property.id, @room.id, approach.id), class:"menuLIST", method: :delete %>
+          </div>
         </div>
         <% end %>
     </div>
