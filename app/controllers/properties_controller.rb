@@ -33,6 +33,10 @@ class PropertiesController < ApplicationController
     @properties = Property.search(params[:keyword])
   end
 
+  def edit
+    @property = Property.find(params[:id])
+  end
+
   private
   def property_params
     params.require(:property).permit(:property_name, :address, :existing_information,

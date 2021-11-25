@@ -35,6 +35,9 @@
   <div class="delete">
     <%= link_to '削除する', property_path(@property.id),class:"menuLIST", method: :delete %>
   </div>
+  <div class="edit">
+    <%= link_to '編集', edit_property_path(@property.id), method: :get %>
+  </div>
   <div class="jump-room">
     <%= link_to "部屋情報を登録する", property_rooms_path(@property.id), class:"menuLIST" %>
   </div>
