@@ -123,6 +123,11 @@ th {
   padding: 20px;
 }
 
+.edit {
+  float :left;
+  padding: 20px;
+}
+
 .jump-room {
   padding: 40px 20px;
 }
