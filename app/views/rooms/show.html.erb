@@ -37,7 +37,11 @@
       <div class="approach-lists">
         <% @approach.each do |approach| %>
         <div class="approach-list">
-          <%= approach.user.name %> <%= approach.content %><%= approach.created_at %>
+          <div class="record">
+            <div class="user-name"><%= approach.user.name %></div>
+            <div class="create-day"><%= approach.created_at %></div>
+          </div>
+          <div class="approach-content"><%= approach.content %></div>
         </div>
         <% end %>
     </div>

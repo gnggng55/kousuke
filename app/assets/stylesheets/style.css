@@ -149,5 +149,15 @@ th {
   text-align: center;
 }
 
+/* 部屋情報詳細ページ */
+
+.record {
+  display: flex;
+}
+
+.create-day {
+  font-size: 12px;
+  padding: 8px 5px 5px 10px;
+}
 
 
