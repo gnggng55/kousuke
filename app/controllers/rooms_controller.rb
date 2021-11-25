@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to property_path(@room.property_id)
     else
-      render property_rooms_path(@room.id)
+      render property_rooms_path(@room.id[])
     end
   end
 
@@ -19,6 +19,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @property = Property.find(params[:property_id])
     @approaches = Approach.where(id: params[:id])
+    @approach = Approach.where(room_id: params[:id]) 
   end
 
   def destroy
