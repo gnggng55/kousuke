@@ -27,7 +27,9 @@
   <div class="delete">
     <%= link_to '削除する', property_room_path(@property, @room.id),class:"menuLIST", method: :delete %>
   </div>
-
+  <div class="edit">
+    <%= link_to '編集', edit_property_room_path(@property.id, @room.id),class:"menuLIST", method: :get %>
+  </div>
   <div class="jump-room">
     <%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id), class:"menuLIST" %>
   </div>

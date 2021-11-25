@@ -29,6 +29,11 @@ class RoomsController < ApplicationController
     redirect_to property_path(@property.id)
   end 
 
+  def edit
+    @property = Property.find(params[:property_id])
+    @room = Room.find(params[:id])
+  end
+
   private
   def room_params
     params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail).merge(property_id: params[:property_id])
