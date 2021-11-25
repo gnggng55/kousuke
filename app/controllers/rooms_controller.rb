@@ -34,6 +34,15 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
   end
 
+  def update
+    @room = Room.find(params[:id])
+    if @room.update(room_params)
+      redirect_to property_room_path(@room.property_id,@room.id)
+    else
+      render :edit
+    end
+  end
+
   private
   def room_params
     params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail).merge(property_id: params[:property_id])
