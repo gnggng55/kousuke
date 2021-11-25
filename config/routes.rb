@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       get 'search'
     end
     resources :rooms, only: [:index, :create, :show, :destroy] do
-      resources :approaches, only: [:index, :create]
+      resources :approaches, only: [:index, :create, :destroy]
     end
   end
   resources :items, only: [:index, :new, :create]
