@@ -34,6 +34,13 @@
 
     <div class="approaches">
       <h4>アプローチ</h4>
+      <div class="approach-lists">
+        <% @approach.each do |approach| %>
+        <div class="approach-list">
+          <%= approach.user.name %> <%= approach.content %><%= approach.created_at %>
+        </div>
+        <% end %>
+    </div>
     </div>
 
   </div>
