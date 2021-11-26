@@ -31,6 +31,10 @@
         <td class="detail-index"><%= @property.remarks %></td>
       </tr>
     </table>
+    <% @property.images.each do |image| %>
+      <div class="detail-property">画像</div>
+      <div class="detail-index"><%= image_tag image.variant(resize: '400x400'), class: 'property-images' if @property.images.attached? %></div>
+    <% end %>
 
   <div class="delete">
     <%= link_to '削除する', property_path(@property.id),class:"menuLIST", method: :delete %>
