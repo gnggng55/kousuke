@@ -3,6 +3,9 @@
     <h3>部屋情報登録</h3>
     <%= form_with(model: [@property, @room],  local: true) do |form| %>
     <div class="input-form">
+      <div class="property-image">
+        <%= form.file_field :images, multiple: true, class:"item-image" %>
+      </div>
       <div class="room_number form">
         <div class="weight-bold-text">部屋番号</div>
         <%= form.text_field :room_number, placeholder: "部屋番号" %>
