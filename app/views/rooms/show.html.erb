@@ -24,6 +24,11 @@
       </tr>
     </table>
 
+    <% @room.images.each do |image| %>
+      <div class="detail-property">画像</div>
+      <div class="detail-index"><%= image_tag image.variant(resize: '400x400'), class: 'property-images' if @room.images.attached? %></div>
+    <% end %>
+
   <div class="delete">
     <%= link_to '削除する', property_room_path(@property, @room.id),class:"menuLIST", method: :delete %>
   </div>

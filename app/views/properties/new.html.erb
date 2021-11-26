@@ -3,6 +3,9 @@
     <h3>物件登録</h3>
     <%= form_with(model: @property, local: true) do |form| %>
     <div class="input-form">
+      <div class="property-image">
+        <%= form.file_field :images, multiple: true, class:"item-image" %>
+      </div>
       <div class="property-name form">
         <div class="weight-bold-text">物件名</div>
         <%= form.text_field :property_name, placeholder: "物件名" %>
