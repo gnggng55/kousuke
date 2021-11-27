@@ -16,6 +16,8 @@
 </div>
 
 <div class="contents">
+
+<div class="search">
   <h3>物件を検索する</h3>
   <%= form_with url: search_properties_path, local: true, method: :get do |form| %>
     <%= form.text_field :keyword, placeholder: "物件名" %>
@@ -24,53 +26,15 @@
 </div>
 
 
-<!-- <div class="search-form">
-<p>物件を検索する</p>
-<table>
-<div class="">
-<%= form_with(url: search_properties_path, local: true, method: :get, class: "search-form") do |form| %>
-  <tr>
-    <div class="property-search form">
-      <th><p>物件名で検索</p></th>
-      <td><%= form.text_field :keyword, placeholder: "物件名", class: "search-input" %></td>
-    </div>
-  </tr>
-  <tr>
-    <div class="address-search form">
-      <th><p>住所で検索する</p></th>
-      <td><%= form.text_field :keyword, placeholder: "住所", class: "search-input" %></td>
-    </div>
-  </tr>
-  <tr>
-    <div class="existing-information-search form">
-      <th><p>既存情報で検索する</p></th>
-      <td><%= form.text_field :keyword, placeholder: "既存情報", class: "search-input" %></td>
-  </div>
-  </tr>
-  <tr>
-    <div class="new-information-search form">
-      <th><p>設置機種で検索する</p></th>
-      <td><%= form.text_field :keyword, placeholder: "設置機種", class: "search-input" %></td>
-    </div>
-  </tr>
-  <td><%= form.submit "検索", class: "search-btn" %></td>
-  </div>
-</table>
-<% end %>
-</div> -->
-
-<div class="contents">
-<h3>登録した物件</h3>
-  <div class="property-lists">
-      <% @properties.each do |property| %>
-        <div class="property-list">
-          <div class="property-name">
+  <div class="record-prprerty">
+    <h3>登録した物件</h3>
+    <div class="property-lists">
+        <% @properties.each do |property| %>
+          <div class="property-list">
             <%= link_to property.property_name, property_path(property.id), class:"menuLIST" %>
-          </div>
-          <div class="property-address">
             <%= property.address %>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+    </div>
   </div>
 </div>

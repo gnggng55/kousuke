@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to property_room_path(@room.property_id, @room.id)
     else
-      render property_rooms_path(@room.id[])
+      redirect_to property_rooms_path(@room.property_id)
     end
   end
 
