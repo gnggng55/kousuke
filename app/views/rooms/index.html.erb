@@ -14,6 +14,10 @@
         <div class="weight-bold-text">工事内容</div>
         <%= form.text_field :construction_detail, placeholder: "工事内容" %>
       </div>
+      <div class="construction-time form">
+        <div class="weight-bold-text">工事時間</div>
+        <%= form.collection_select(:construction_time_id, ConstructionTime.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
       <div class="instruction form">
         <div class="weight-bold-text">工事指示</div>
         <%= form.text_area :instruction, placeholder: "工事指示", rows: "10", size: "53x10" %>
