@@ -27,6 +27,10 @@
         <div class="weight-bold-text">駐車場情報</div>
         <%= form.collection_select(:parking_id, Parking.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
+      <div class="new-information form">
+        <div class="weight-bold-text">ガス種</div>
+        <%= form.collection_select(:gas_id, Gas.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
       <div class="remarks form">
         <div class="weight-bold-text">備考</div>
         <%= form.text_area :remarks, placeholder: "備考", rows: "10", size: "53x10" %>

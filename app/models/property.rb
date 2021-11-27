@@ -4,6 +4,7 @@ class Property < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :parking
+  belongs_to :gas
   
 
   def self.search(search)
