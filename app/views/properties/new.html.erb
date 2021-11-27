@@ -22,6 +22,9 @@
         <div class="weight-bold-text">新規機種</div>
         <%= form.text_field :new_information, placeholder: "新規機種" %>
       </div>
+      <div class="new-information form">
+        <%= form.collection_select(:parking_id, Parking.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
       <div class="remarks form">
         <div class="weight-bold-text">備考</div>
         <%= form.text_area :remarks, placeholder: "備考", rows: "10", size: "53x10" %>
