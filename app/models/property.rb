@@ -9,7 +9,7 @@ class Property < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Property.where('text LIKE(?)', "%#{search}%")
+      Property.where('property_name LIKE(?)', "%#{search}%")
     else
       Property.all
     end
