@@ -3,6 +3,7 @@
     <h3>物件登録</h3>
     <%= form_with(model: @property, local: true) do |form| %>
     <div class="input-form">
+      <div class="weight-bold-text">画像</div>
       <div class="property-image">
         <%= form.file_field :images, multiple: true, class:"item-image" %>
       </div>
@@ -21,6 +22,10 @@
       <div class="new-information form">
         <div class="weight-bold-text">新規機種</div>
         <%= form.text_field :new_information, placeholder: "新規機種" %>
+      </div>
+      <div class="new-information form">
+        <div class="weight-bold-text">駐車場情報</div>
+        <%= form.collection_select(:parking_id, Parking.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
       <div class="remarks form">
         <div class="weight-bold-text">備考</div>

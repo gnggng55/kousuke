@@ -92,12 +92,22 @@ h1 {
 }
 
 .form {
-  padding: 3px;
+  padding: 8px;
 }
 
 .detail-table {
   max-width: 500px;
 }
+
+.property-image {
+  padding:15px;
+}
+
+.select-box {
+  height: 30px;
+  width: 300px;
+}
+
 /* 物件詳細 */
 
 table {
