@@ -1,3 +1,15 @@
-<% @properties.each do |property| %>
-    <%= property.property_name %>
-<% end %>
+<div class="contents">
+<h3>物件</h3>
+  <div class="property-lists">
+      <% @properties.each do |property| %>
+        <div class="property-list">
+          <div class="property-name">
+            <%= link_to property.property_name, property_path(property.id), class:"menuLIST" %>
+          </div>
+          <div class="property-address">
+            <%= property.address %>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
