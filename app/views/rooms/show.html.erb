@@ -38,6 +38,9 @@
   <div class="jump-room">
     <%= link_to "アプローチを登録する", property_room_approaches_path(@property.id, @room.id), class:"menuLIST" %>
   </div>
+  <div class="back">
+    <%= link_to "物件詳細に戻る", property_path(@property.id), class:"menuLIST" %>
+  </div>
 
     <div class="approaches">
       <h4>アプローチ</h4>

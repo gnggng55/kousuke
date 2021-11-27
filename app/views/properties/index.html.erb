@@ -1,6 +1,5 @@
 <div class="menu">
   <ul>
-    <li><%= link_to "物件検索", root_path, class:"menuLIST" %></li>
     <li><%= link_to "物件登録", new_property_path, class:"menuLIST" %></li>
     <li><%= link_to "商品検索", root_path, class:"menuLIST" %></li>
     <li><%= link_to "商品登録", root_path, class:"menuLIST" %></li>
@@ -15,6 +14,15 @@
     </div>
   </ul>
 </div>
+
+<div class="contents">
+  <h3>物件を検索する</h3>
+  <%= form_with url: search_properties_path, local: true, method: :get do |form| %>
+    <%= form.text_field :keyword, placeholder: "物件名" %>
+    <%= form.submit "検索" %>
+  <% end %>
+</div>
+
 
 <!-- <div class="search-form">
 <p>物件を検索する</p>
