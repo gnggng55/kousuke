@@ -6,6 +6,7 @@ class Property < ApplicationRecord
   belongs_to :parking
   belongs_to :gas
   
+  validates :property_name, presence: true
 
   def self.search(search)
     if search != ""

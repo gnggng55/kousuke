@@ -29,6 +29,7 @@ URL：https://kousuke.herokuapp.com/
 
 - ユーザー管理機能
 - 物件の登録機能
+- 物件検索機能
 - 物件情報編集機能
 - 物件内の部屋情報登録機能
 - 部屋情報登録機能
@@ -41,15 +42,27 @@ URL：https://kousuke.herokuapp.com/
 ## DEMO
 
 #### トップページ
-[![Image from Gyazo](https://i.gyazo.com/c779f445f1f273aea035c61e86e9641b.png)](https://gyazo.com/c779f445f1f273aea035c61e86e9641b)
+[![Image from Gyazo](https://i.gyazo.com/2f7facf256125fae60942a5e9809ca68.png)](https://gyazo.com/2f7facf256125fae60942a5e9809ca68)
 
 アプリ名をクリックするとこのページに遷移します。
 登録した物件が一覧で出るようになっています。
 
 
+#### 登録画面
+[![Image from Gyazo](https://i.gyazo.com/9826247f444f3fc5dd20b0fb5df79d5a.gif)](https://gyazo.com/9826247f444f3fc5dd20b0fb5df79d5a)
+
+各情報を入力することで物件の登録をすることができます。
+
+
 
 #### 物件・部屋情報詳細ページ
 [![Image from Gyazo](https://i.gyazo.com/3243d6aec919bb4d594896cd475c91e4.gif)](https://gyazo.com/3243d6aec919bb4d594896cd475c91e4)
+
+物件名から検索することができます。
+
+
+
+[![Image from Gyazo](https://i.gyazo.com/a6dcf778309bf3d7bfe981c8c6158bb9.gif)](https://gyazo.com/a6dcf778309bf3d7bfe981c8c6158bb9)
 
 物件名をクリックすると、物件詳細ページに遷移します。
 物件詳細ページでは部屋情報が一覧になっており、部屋番号をクリックすると
@@ -83,10 +96,8 @@ VSCode
 
 
 ## 実装予定
-- 物件検索機能
 - 商品検索機能
 - 見積もり作成機能
-- その他カラムの保存
 - テスト
 
 
