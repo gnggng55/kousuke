@@ -4,6 +4,8 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :item_name,      null: false
       t.string :product_number, null: false
       t.integer :price,         null: false
+      t.string :maker,          null: false
+      t.string :supplier
       t.integer :rate
       t.integer :gas_id
       t.timestamps

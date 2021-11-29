@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2021_11_26_023145) do
     t.string "item_name", null: false
     t.string "product_number", null: false
     t.integer "price", null: false
+    t.string "maker", null: false
+    t.string "supplier"
     t.integer "rate"
     t.integer "gas_id"
     t.datetime "created_at", precision: 6, null: false
@@ -56,11 +58,10 @@ ActiveRecord::Schema.define(version: 2021_11_26_023145) do
   create_table "properties", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "property_name", null: false
     t.text "address", null: false
-    t.string "existing_information"
-    t.string "new_information"
     t.text "remarks"
     t.integer "parking_id"
     t.integer "gas_id"
+    t.integer "property_kind_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -69,8 +70,11 @@ ActiveRecord::Schema.define(version: 2021_11_26_023145) do
     t.integer "room_number", null: false
     t.string "construction_detail"
     t.string "construction_time_id"
+    t.string "existing_information"
+    t.string "existing_maker"
     t.text "instruction"
     t.text "remarks_room"
+    t.string "construction_day"
     t.bigint "property_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

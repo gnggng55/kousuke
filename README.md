@@ -119,15 +119,14 @@ VSCode
 
 ## properties テーブル
 
-| Column               | Type    | Options     |
-| -------------------- | ------- | ------------|
-| property_name        | string  | null: false |
-| address              | text    | null: false |
-| existing_information | string  |             |
-| new_information      | string  |             |
-| remarks              | text    |             |
-| parking_id           | integer |             |
-| gas_id               | integer |             |
+| Column           | Type    | Options     |
+| ---------------- | ------- | ------------|
+| property_name    | string  | null: false |
+| address          | text    | null: false |
+| remarks          | text    |             |
+| parking_id       | integer |             |
+| gas_id           | integer |             |
+| property_kind_id | integer | null: false |
 
 ### Association
 - has_many :rooms
@@ -143,6 +142,9 @@ VSCode
 | remarks_room         | text       |                                |
 | construction_detail  | string     |                                |
 | property             | references | null: false, foreign_key: true |
+| existing_information | string     |                                |
+| existing_maker       | string     |                                |
+| construction_day     | string     |                                |
 
 ### Associations
 - belongs_to :property
@@ -176,13 +178,14 @@ has_many :items
 
 
 ## items
-| Column         | Type       | Options     |
-| -------------- | ---------- | ------------|
-| item_name      | string     | null: false |
-| product_number | string     | null: false |
-| price          | integer    | null: false |
-| rate           | integer    |             |
-| gas_id         | integer    |             |
+| Column         | Type    | Options     |
+| -------------- | ------- | ------------|
+| item_name      | string  | null: false |
+| product_number | string  | null: false |
+| price          | integer | null: false |
+| rate           | integer |             |
+| gas_id         | integer |             |
+| supplier       | srting  |             |
 
 ### Association
 has_many :quotation
