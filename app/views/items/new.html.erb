@@ -23,6 +23,10 @@
         <div class="weight-bold-text">定価</div>
         <%= form.text_field :price, placeholder: "定価" %>
       </div>
+      <div class="rate form">
+        <div class="weight-bold-text">仕切り</div>
+        <%= form.text_field :rate, placeholder: "仕切り" %>
+      </div>
       <div class="gas form">
         <div class="weight-bold-text">ガス種</div>
         <%= form.collection_select(:gas_id, Gas.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
