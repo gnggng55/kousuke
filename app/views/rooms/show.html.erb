@@ -11,6 +11,14 @@
         <td class="detail-index"><%= @room.construction_detail %></td>
       </tr>
       <tr>
+        <th class="detail-property">既存情報</th>
+        <td class="detail-index"><%= @room.existing_information %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">既存メーカー</th>
+        <td class="detail-index"><%= @room.existing_maker%></td>
+      </tr>
+      <tr>
         <th class="detail-property">工事時間</th>
         <td class="detail-index"><%= @room.construction_time.name %></td>
       </tr>
@@ -21,6 +29,10 @@
       <tr>
         <th class="detail-property">備考</th>
         <td class="detail-index"><%= @room.remarks_room %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">工事日</th>
+        <td class="detail-index"><%= @room.construction_day %></td>
       </tr>
     </table>
 

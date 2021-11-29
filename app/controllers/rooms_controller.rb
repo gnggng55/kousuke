@@ -45,7 +45,8 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail, images: []).merge(property_id: params[:property_id])
+    params.require(:room).permit(:room_number, :construction_time_id, :instruction, :remarks_room, :construction_detail, 
+      :existing_information, :existing_maker, :construction_day, images: []).merge(property_id: params[:property_id])
   end
 
   def move_to_index

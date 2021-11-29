@@ -14,6 +14,14 @@
         <div class="weight-bold-text">工事内容</div>
         <%= form.text_field :construction_detail, placeholder: "工事内容" %>
       </div>
+      <div class="existing-information form">
+        <div class="weight-bold-text">既存情報</div>
+        <%= form.text_field :existing_information, placeholder: "既存情報" %>
+      </div>
+      <div class="existing-maker form">
+        <div class="weight-bold-text">既存メーカー</div>
+        <%= form.text_field :existing_maker, placeholder: "既存メーカー" %>
+      </div>
       <div class="construction-time form">
         <div class="weight-bold-text">工事時間</div>
         <%= form.collection_select(:construction_time_id, ConstructionTime.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
@@ -26,6 +34,10 @@
       <div class="remarks_room form">
         <div class="weight-bold-text">備考</div>
         <%= form.text_area :remarks_room, placeholder: "備考", rows: "10", size: "53x10" %>
+      </div>
+      <div class="construction-day form">
+        <div class="weight-bold-text">工事日</div>
+        <%= form.text_field :construction_day, placeholder: "工事日" %>
       </div>
       <%= form.submit "登録する" %>
     </div>
