@@ -185,7 +185,7 @@ has_many :items
 | price          | integer | null: false |
 | rate           | integer |             |
 | gas_id         | integer |             |
-| supplier       | srting  |             |
+| supplier       | string  |             |
 
 ### Association
 has_many :quotation

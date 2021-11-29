@@ -3,9 +3,17 @@
     <h3>商品登録</h3>
     <%= form_with(model: @item, local: true) do |form| %>
     <div class="input-form">
+    <div class="weight-bold-text">画像</div>
+      <div class="item-image">
+        <%= form.file_field :images, multiple: true, class:"item-image" %>
+      </div>
       <div class="item_name form">
         <div class="weight-bold-text">商品名</div>
         <%= form.text_field :item_name, placeholder: "商品名" %>
+      </div>
+      <div class="maker form">
+        <div class="weight-bold-text">メーカー</div>
+        <%= form.text_field :maker, placeholder: "メーカー" %>
       </div>
       <div class="product_number form">
         <div class="weight-bold-text">品番</div>
@@ -19,6 +27,11 @@
         <div class="weight-bold-text">ガス種</div>
         <%= form.collection_select(:gas_id, Gas.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
       </div>
+      <div class="supplier form">
+        <div class="weight-bold-text">仕入れ先</div>
+        <%= form.text_field :supplier, placeholder: "品番" %>
+      </div>
+  
       <%= form.submit "登録する" %>
     </div>
     <% end %>
