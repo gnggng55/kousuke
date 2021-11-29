@@ -1,0 +1,12 @@
+<div class="contents">
+  <h3>商品</h3>
+    <div class="item-lists">
+      <% @items.each do |item| %>
+        <div class="item-list">
+          <div class="item-name">
+            <%= item.product_number %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="menu">
   <ul>
     <li><%= link_to "物件登録", new_property_path, class:"menuLIST" %></li>
-    <li><%= link_to "商品検索", root_path, class:"menuLIST" %></li>
+    <li><%= link_to "商品検索", items_path, class:"menuLIST" %></li>
     <li><%= link_to "商品登録", new_item_path, class:"menuLIST" %></li>
     <div class="user-list">
     <% if user_signed_in? %>
