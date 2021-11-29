@@ -49,7 +49,7 @@ class PropertiesController < ApplicationController
   private
   def property_params
     params.require(:property).permit(:property_name, :address, :existing_information,
-       :new_information, :remarks, :parking_id, :gas_id, images: [])
+      :property_kind_id, :remarks, :parking_id, :gas_id, images: [])
   end
 
   def move_to_index

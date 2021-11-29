@@ -5,6 +5,7 @@ class Property < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :parking
   belongs_to :gas
+  belongs_to :propertyKind
   
   validates :property_name, presence: true
 

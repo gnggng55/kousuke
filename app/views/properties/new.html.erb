@@ -15,6 +15,10 @@
         <div class="weight-bold-text">住所</div>
         <%= form.text_field :address, placeholder: "住所" %>
       </div>
+      <div class="kinds form">
+        <div class="weight-bold-text">物件情報</div>
+        <%= form.collection_select(:property_kind_id, PropertyKind.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
       <div class="parking form">
         <div class="weight-bold-text">駐車場情報</div>
         <%= form.collection_select(:parking_id, Parking.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
