@@ -6,4 +6,18 @@
       <%= form.submit "検索" %>
     <% end %>
   </div>
+
+  <div class="record-item">
+    <h3>登録した商品</h3>
+    <div class="item-lists">
+        <% @items.each do |item| %>
+          <div class="item-list">
+            
+            <%= link_to item.product_number, item_path(item.id),class:"menuLIST" %>
+            <%= item.maker %>
+            <%= item.item_name %>
+          </div>
+        <% end %>
+    </div>
+  </div>
 </div>

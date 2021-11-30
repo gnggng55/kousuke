@@ -1,0 +1,35 @@
+<div class="contents">
+  <div class="container">
+    <h3>商品詳細</h3>
+    <table >
+      <tr>
+        <th class="detail-property">商品名</th>
+        <td class="detail-index"><%= @item.item_name %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">品番</th>
+        <td class="detail-index"><%= @item.product_number %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">定価</th>
+        <td class="detail-index"><%= @item.price %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">仕切り</th>
+        <td class="detail-index"><%= @item.rate %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">ガス種</th>
+        <td class="detail-index"><%= @item.gas.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-property">仕入れ先</th>
+        <td class="detail-index"><%= @item.supplier %></td>
+      </tr>
+    </table>
+    <% @item.images.each do |image| %>
+      <div class="detail-property">画像</div>
+      <div class="detail-index"><%= image_tag image.variant(resize: '400x400'), class: 'item-images' if @item.images.attached? %></div>
+    <% end %>
+  </div>
+</div>

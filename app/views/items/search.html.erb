@@ -4,7 +4,7 @@
       <% @items.each do |item| %>
         <div class="item-list">
           <div class="item-name">
-            <%= item.product_number %>
+            <%= link_to item.product_number, item_path(item.id),class:"menuLIST" %>
           </div>
         </div>
       <% end %>
