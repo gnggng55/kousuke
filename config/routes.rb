@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items, only: [:index, :new, :create] do
+  resources :items, only: [:index, :new, :create, :show] do
     collection do
       get 'search'
     end

@@ -136,7 +136,7 @@ th {
   text-align: center;
 }
 
-.room-list,.approach-list,.property-list  {
+.room-list,.approach-list,.property-list,.item-list  {
   padding: 20px;
   background-color: rgba(141, 224, 141, 0.238);
   padding: 20px;
