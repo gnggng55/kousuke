@@ -21,6 +21,18 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def destroy
+    item = Item.find(params[:id])
+    item.destroy
+    redirect_to items_path
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
   def search
     @items = Item.search(params[:keyword])
   end
